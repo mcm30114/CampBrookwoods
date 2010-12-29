@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 
-@interface WebcamViewController : UIViewController
+@interface WebcamViewController : UIViewController <UIWebViewDelegate>
 {
-	IBOutlet UIImageView *webcamView;
 	IBOutlet UINavigationBar *navBar;
 	IBOutlet UIActivityIndicatorView *aiv;
+	IBOutlet UIWebView *webcamView;
 	NSString *url;
 	NSString *name;
 }
@@ -21,7 +21,7 @@
 -(void)updateCamera;
 -(IBAction) returnToMainMenu;
 
-@property (nonatomic, retain) UIImageView *webcamView;
+@property (nonatomic, retain) IBOutlet UIWebView *webcamView;
 @property (nonatomic, retain) IBOutlet UINavigationBar *navBar;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *aiv;
 @property (assign) NSString *url;

@@ -31,24 +31,25 @@
 	[self.aiv startAnimating];
 	self.navBar.topItem.title = name;
 	[self performSelector:@selector(updateCamera) withObject:nil afterDelay:0.1];
+	webcamView.delegate = self;
 }
 
 -(void)updateCamera
 {
 	self.aiv.hidesWhenStopped = YES;
-	NSData *webcamData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+	[webcamView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:0 timeoutInterval:8]];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
 	[self.aiv stopAnimating];
-	if(webcamData == nil)
-	{
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Connection" message:@"You must be connected to the internet to view the webcam" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-		[alert show];
-		self.webcamView.image = [UIImage imageNamed:@"noWebcamForYou.png"];
-	}
-	else
-	{
-		UIImage *webcam = [UIImage imageWithData:webcamData];
-		self.webcamView.image = webcam;
-	}
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+	[alert show];
+	[self.webcamView loadRequest:[NSURLRequest requestWithURL:[[NSBundle mainBundle] URLForResource:@"noWebcamForYou" withExtension:@"png"]]];
 }
 
 -(IBAction) returnToMainMenu

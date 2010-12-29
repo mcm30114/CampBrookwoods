@@ -6,7 +6,7 @@
 //  Copyright 2010 Christian Camps and Conferences.Inc. All rights reserved.
 //
 
-#define XML_URL	@"http://localhost/sampleRSS.xml"
+//#define XML_URL	@"http://localhost/sampleRSS.xml"
 
 #import "RSSParser.h"
 
@@ -18,7 +18,7 @@
 	articles = article;
 	
 	// Initialize NSXMLParser
-	NSXMLParser *rssParser = [[[NSXMLParser alloc] initWithContentsOfURL:[NSURL URLWithString:XML_URL]] autorelease];
+	NSXMLParser *rssParser = [[[NSXMLParser alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"sampleRSS" withExtension:@"xml"]] autorelease];
 	
 	[rssParser setDelegate:self];
 	[rssParser setShouldResolveExternalEntities:YES];

@@ -34,6 +34,8 @@
 		3880F3AF12BFF02700415311 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3880F3AD12BFF02700415311 /* NewsViewController.m */; };
 		3880F3B012BFF02700415311 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3880F3AE12BFF02700415311 /* NewsViewController.xib */; };
 		3880F4B512C000FA00415311 /* tree bark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3880F4B412C000FA00415311 /* tree bark.png */; };
+		38D9FC4B12CBBEA300164E85 /* sampleRSS.xml in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FC4A12CBBEA300164E85 /* sampleRSS.xml */; };
+		38D9FC5B12CBC18700164E85 /* BWApp-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FC5A12CBC18700164E85 /* BWApp-Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,8 @@
 		3880F3AD12BFF02700415311 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		3880F3AE12BFF02700415311 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
 		3880F4B412C000FA00415311 /* tree bark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree bark.png"; sourceTree = "<group>"; };
+		38D9FC4A12CBBEA300164E85 /* sampleRSS.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sampleRSS.xml; sourceTree = "<group>"; };
+		38D9FC5A12CBC18700164E85 /* BWApp-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BWApp-Icon.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CampBrookwoods-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CampBrookwoods-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				38D9FC5A12CBC18700164E85 /* BWApp-Icon.png */,
+				38D9FC4A12CBBEA300164E85 /* sampleRSS.xml */,
 				384B6FA412CA4A9200A0E5FE /* checkmark.png */,
 				3880F4B412C000FA00415311 /* tree bark.png */,
 				3880F3A512BFEF3000415311 /* news.png */,
@@ -308,6 +314,8 @@
 				383E5A5D12C1431B00B104D3 /* ArticleViewController.xib in Resources */,
 				384B6F8912CA385800A0E5FE /* AlertSignupViewController.xib in Resources */,
 				384B6FA512CA4A9200A0E5FE /* checkmark.png in Resources */,
+				38D9FC4B12CBBEA300164E85 /* sampleRSS.xml in Resources */,
+				38D9FC5B12CBC18700164E85 /* BWApp-Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

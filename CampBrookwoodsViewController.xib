@@ -52,7 +52,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUINavigationItem" id="18391098">
 								<reference key="IBUINavigationBar" ref="22134547"/>
-								<string key="IBUITitle">Brookwoods App</string>
+								<string key="IBUITitle">Brookwoods and Deer Run</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 						</object>
@@ -145,7 +145,7 @@
 					<string>UIResponder</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{606, 507}, {320, 460}}</string>
+					<string>{{537, 508}, {320, 460}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
