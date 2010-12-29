@@ -39,12 +39,12 @@
     [super viewDidLoad];
 	
 	//create lawn webcam icon
-	lawnWebcamIcon = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"webcam.png"] name:@"Front Lawn"] autorelease];
+	lawnWebcamIcon = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"webcam.png"] name:@"Front Lawn Web Cam"] autorelease];
 	[lawnWebcamIcon retain];
 	lawnWebcamIcon.delegate = self;
 	
 	//create boathouse webcam icon
-	waterWebcamIcon = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"webcam.png"] name:@"Boat House"] autorelease];
+	waterWebcamIcon = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"webcam.png"] name:@"Boat House Web Cam"] autorelease];
 	[waterWebcamIcon retain];
 	waterWebcamIcon.delegate = self;
 	
@@ -54,7 +54,7 @@
 	newsIcon.delegate = self;
 	
 	//create rss icon
-	alertSignup = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"news.png"] name:@"Alert Sign-Up"] autorelease];
+	alertSignup = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"email.png"] name:@"Sign Up\nFor Alerts"] autorelease];
 	[alertSignup retain];
 	alertSignup.delegate = self;
 	
@@ -64,10 +64,10 @@
 	[self.view addSubview:newsIcon.view];
 	[self.view addSubview:alertSignup.view];
 	
-	lawnWebcamIcon.view.frame = CGRectMake(48, 90, lawnWebcamIcon.view.frame.size.width, lawnWebcamIcon.view.frame.size.height);
-	waterWebcamIcon.view.frame = CGRectMake(48, 180, lawnWebcamIcon.view.frame.size.width, lawnWebcamIcon.view.frame.size.height);
-	newsIcon.view.frame = CGRectMake(208, 90, newsIcon.view.frame.size.width, newsIcon.view.frame.size.height);
-	alertSignup.view.frame = CGRectMake(208, 180, alertSignup.view.frame.size.width, newsIcon.view.frame.size.height);
+	lawnWebcamIcon.view.frame = CGRectMake(68, 70, lawnWebcamIcon.view.frame.size.width, lawnWebcamIcon.view.frame.size.height);
+	waterWebcamIcon.view.frame = CGRectMake(68, 170, lawnWebcamIcon.view.frame.size.width, lawnWebcamIcon.view.frame.size.height);
+	newsIcon.view.frame = CGRectMake(188, 70, newsIcon.view.frame.size.width, newsIcon.view.frame.size.height);
+	alertSignup.view.frame = CGRectMake(188, 170, alertSignup.view.frame.size.width, newsIcon.view.frame.size.height);
 	
 	//add countdown to view
 	cvc = [[[CountdownViewController alloc] initWithNibName:@"CountdownViewController" bundle:nil] autorelease];
@@ -100,7 +100,9 @@
 		((WebcamViewController *)presentedViewController).name = @"Boat House Camera";
 	}
 	if(icon == newsIcon)
-		presentedViewController	= [[UINavigationController alloc] initWithRootViewController:[[NewsViewController alloc] initWithNibName:@"NewsViewController" bundle:nil]];
+	{
+		presentedViewController	= [[[UINavigationController alloc] initWithRootViewController:[[[NewsViewController alloc] initWithNibName:@"NewsViewController" bundle:nil] autorelease]] autorelease];
+	}
 	if(icon == alertSignup)
 	{
 		//create alert sign-up view controller here

@@ -29,13 +29,17 @@
 		3880F27412BFBBEF00415311 /* noWebcamForYou.png in Resources */ = {isa = PBXBuildFile; fileRef = 3880F27312BFBBEF00415311 /* noWebcamForYou.png */; };
 		3880F2E712BFD9DB00415311 /* Icon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3880F2E512BFD9DB00415311 /* Icon.m */; };
 		3880F2E812BFD9DB00415311 /* Icon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3880F2E612BFD9DB00415311 /* Icon.xib */; };
-		3880F33012BFE2D000415311 /* webcam.png in Resources */ = {isa = PBXBuildFile; fileRef = 3880F32F12BFE2D000415311 /* webcam.png */; };
-		3880F3A612BFEF3000415311 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 3880F3A512BFEF3000415311 /* news.png */; };
 		3880F3AF12BFF02700415311 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3880F3AD12BFF02700415311 /* NewsViewController.m */; };
 		3880F3B012BFF02700415311 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3880F3AE12BFF02700415311 /* NewsViewController.xib */; };
-		3880F4B512C000FA00415311 /* tree bark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3880F4B412C000FA00415311 /* tree bark.png */; };
 		38D9FC4B12CBBEA300164E85 /* sampleRSS.xml in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FC4A12CBBEA300164E85 /* sampleRSS.xml */; };
-		38D9FC5B12CBC18700164E85 /* BWApp-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FC5A12CBC18700164E85 /* BWApp-Icon.png */; };
+		38D9FC7612CBC69400164E85 /* Countdown-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FC7512CBC69400164E85 /* Countdown-Background.png */; };
+		38D9FC7C12CBC78B00164E85 /* Main-Background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FC7B12CBC78B00164E85 /* Main-Background2.png */; };
+		38D9FC8512CBC92400164E85 /* NavBar-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FC8412CBC92400164E85 /* NavBar-Background.png */; };
+		38D9FCDD12CBCEBD00164E85 /* Main-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FCDC12CBCEBD00164E85 /* Main-Background.png */; };
+		38D9FD1612CBD97500164E85 /* webcam.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FD1512CBD97500164E85 /* webcam.png */; };
+		38D9FD1A12CBD9E900164E85 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FD1912CBD9E900164E85 /* news.png */; };
+		38D9FD1E12CBDA4E00164E85 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FD1D12CBDA4E00164E85 /* email.png */; };
+		38D9FDB112CBE81300164E85 /* BWDRApp-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FDB012CBE81300164E85 /* BWDRApp-Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,14 +77,18 @@
 		3880F2E412BFD9DB00415311 /* Icon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Icon.h; sourceTree = "<group>"; };
 		3880F2E512BFD9DB00415311 /* Icon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Icon.m; sourceTree = "<group>"; };
 		3880F2E612BFD9DB00415311 /* Icon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Icon.xib; sourceTree = "<group>"; };
-		3880F32F12BFE2D000415311 /* webcam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = webcam.png; sourceTree = "<group>"; };
-		3880F3A512BFEF3000415311 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
 		3880F3AC12BFF02700415311 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		3880F3AD12BFF02700415311 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		3880F3AE12BFF02700415311 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
-		3880F4B412C000FA00415311 /* tree bark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree bark.png"; sourceTree = "<group>"; };
 		38D9FC4A12CBBEA300164E85 /* sampleRSS.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sampleRSS.xml; sourceTree = "<group>"; };
-		38D9FC5A12CBC18700164E85 /* BWApp-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BWApp-Icon.png"; sourceTree = "<group>"; };
+		38D9FC7512CBC69400164E85 /* Countdown-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Countdown-Background.png"; sourceTree = "<group>"; };
+		38D9FC7B12CBC78B00164E85 /* Main-Background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main-Background2.png"; sourceTree = "<group>"; };
+		38D9FC8412CBC92400164E85 /* NavBar-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBar-Background.png"; sourceTree = "<group>"; };
+		38D9FCDC12CBCEBD00164E85 /* Main-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main-Background.png"; sourceTree = "<group>"; };
+		38D9FD1512CBD97500164E85 /* webcam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = webcam.png; sourceTree = "<group>"; };
+		38D9FD1912CBD9E900164E85 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
+		38D9FD1D12CBDA4E00164E85 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
+		38D9FDB012CBE81300164E85 /* BWDRApp-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BWDRApp-Icon.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CampBrookwoods-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CampBrookwoods-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,12 +156,16 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				38D9FC5A12CBC18700164E85 /* BWApp-Icon.png */,
+				38D9FDB012CBE81300164E85 /* BWDRApp-Icon.png */,
+				38D9FD1D12CBDA4E00164E85 /* email.png */,
+				38D9FD1912CBD9E900164E85 /* news.png */,
+				38D9FD1512CBD97500164E85 /* webcam.png */,
+				38D9FCDC12CBCEBD00164E85 /* Main-Background.png */,
+				38D9FC8412CBC92400164E85 /* NavBar-Background.png */,
+				38D9FC7B12CBC78B00164E85 /* Main-Background2.png */,
+				38D9FC7512CBC69400164E85 /* Countdown-Background.png */,
 				38D9FC4A12CBBEA300164E85 /* sampleRSS.xml */,
 				384B6FA412CA4A9200A0E5FE /* checkmark.png */,
-				3880F4B412C000FA00415311 /* tree bark.png */,
-				3880F3A512BFEF3000415311 /* news.png */,
-				3880F32F12BFE2D000415311 /* webcam.png */,
 				3880F27312BFBBEF00415311 /* noWebcamForYou.png */,
 				2899E5210DE3E06400AC0155 /* CampBrookwoodsViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -307,15 +319,19 @@
 				3880F23812BFB20800415311 /* CountdownViewController.xib in Resources */,
 				3880F27412BFBBEF00415311 /* noWebcamForYou.png in Resources */,
 				3880F2E812BFD9DB00415311 /* Icon.xib in Resources */,
-				3880F33012BFE2D000415311 /* webcam.png in Resources */,
-				3880F3A612BFEF3000415311 /* news.png in Resources */,
 				3880F3B012BFF02700415311 /* NewsViewController.xib in Resources */,
-				3880F4B512C000FA00415311 /* tree bark.png in Resources */,
 				383E5A5D12C1431B00B104D3 /* ArticleViewController.xib in Resources */,
 				384B6F8912CA385800A0E5FE /* AlertSignupViewController.xib in Resources */,
 				384B6FA512CA4A9200A0E5FE /* checkmark.png in Resources */,
 				38D9FC4B12CBBEA300164E85 /* sampleRSS.xml in Resources */,
-				38D9FC5B12CBC18700164E85 /* BWApp-Icon.png in Resources */,
+				38D9FC7612CBC69400164E85 /* Countdown-Background.png in Resources */,
+				38D9FC7C12CBC78B00164E85 /* Main-Background2.png in Resources */,
+				38D9FC8512CBC92400164E85 /* NavBar-Background.png in Resources */,
+				38D9FCDD12CBCEBD00164E85 /* Main-Background.png in Resources */,
+				38D9FD1612CBD97500164E85 /* webcam.png in Resources */,
+				38D9FD1A12CBD9E900164E85 /* news.png in Resources */,
+				38D9FD1E12CBDA4E00164E85 /* email.png in Resources */,
+				38D9FDB112CBE81300164E85 /* BWDRApp-Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

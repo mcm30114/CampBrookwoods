@@ -80,7 +80,7 @@
 					<object class="IBUIActivityIndicatorView" id="1035754360">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{141, 212}, {37, 37}}</string>
+						<string key="NSFrame">{{141, 230}, {37, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>

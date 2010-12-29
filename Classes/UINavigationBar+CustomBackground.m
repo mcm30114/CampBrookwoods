@@ -11,12 +11,18 @@
 
 @implementation UINavigationBar (CustomBackground)
 
-// Uncomment here to set custom UINavigationBar backgrounds!
-/*
-- (void)drawRect:(CGRect)rect {
-	UIImage *image = [UIImage imageNamed: @"tree bark.png"];
+- (void)drawRect:(CGRect)rect
+{
+	UIImage *image = [UIImage imageNamed: @"NavBar-Background.png"];
 	[image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+	
+	UILabel *topLabel = [[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 44)] autorelease];
+	topLabel.text = self.topItem.title;
+	topLabel.font = [UIFont fontWithName:@"Brushscript" size:28];
+	topLabel.backgroundColor = [UIColor clearColor];
+	topLabel.textAlignment = UITextAlignmentCenter;
+	topLabel.textColor = [UIColor blackColor];
+	self.topItem.titleView = topLabel;
 }
- */
 
 @end

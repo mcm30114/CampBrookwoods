@@ -36,31 +36,51 @@
 -(void) updateCountdownView
 {
 	//create today's date
-	today = [[[NSDate alloc] init] autorelease];
+	NSDate *today = [[[NSDate alloc] init] autorelease];
+	[today retain];
 	
 	//setup camp date
 	NSDateComponents *components= [[[NSDateComponents alloc] init] autorelease];
+	[components retain];
+	
 	[components setDay:DAY];
 	[components setMonth:MONTH];
 	[components setYear:YEAR];
 	
 	NSCalendar *gregorian = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+	[gregorian retain];
 	
 	//set date then adjust for session
-	campStart = [gregorian dateFromComponents:components];
+	NSDate *campStart = [gregorian dateFromComponents:components];
 	campStart = [campStart dateByAddingTimeInterval:60 * 60 * 24 * 7 * 2 * selectedSession]; // multiply camp session times two weeks
 	
 	//get interval
 	NSDateComponents *intervalComponents = [gregorian components:NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit fromDate:today toDate:campStart options:0];
 	
 	//initialize labels
-	NSDateFormatter *df = [[[NSDateFormatter alloc] init] autorelease];
-	[df setDateStyle:NSDateFormatterMediumStyle];
-	months.text = [NSString stringWithFormat:@"%d", [intervalComponents month]];
-	days.text = [NSString stringWithFormat:@"%d", [intervalComponents day]];
-	hours.text = [NSString stringWithFormat:@"%d", [intervalComponents hour]];
-	minutes.text = [NSString stringWithFormat:@"%d", [intervalComponents minute]];
-	sessionLabel.text = [NSString stringWithFormat:@"Session %d: %@", selectedSession + 1, [df stringFromDate:campStart]];
+	if([today timeIntervalSinceDate:campStart] > 0) // if camp has already started...
+	{
+		months.text = @"--";
+		days.text = @"--";
+		hours.text = @"--";
+		minutes.text = @"--";
+		sessionLabel.text = @"Camp has already started!!";
+	}
+	else
+	{
+		NSDateFormatter *df = [[[NSDateFormatter alloc] init] autorelease];
+		[df setDateStyle:NSDateFormatterMediumStyle];
+		months.text = [NSString stringWithFormat:@"%d", [intervalComponents month]];
+		days.text = [NSString stringWithFormat:@"%d", [intervalComponents day]];
+		hours.text = [NSString stringWithFormat:@"%d", [intervalComponents hour]];
+		minutes.text = [NSString stringWithFormat:@"%d", [intervalComponents minute]];
+		sessionLabel.text = [NSString stringWithFormat:@"Session %d: %@", selectedSession + 1, [df stringFromDate:campStart]];
+	}
+	
+	//release dates
+	[today release];
+	[components release];
+	[gregorian release];
 	
 	[self performSelector:@selector(updateCountdownView) withObject:nil afterDelay:60];
 }

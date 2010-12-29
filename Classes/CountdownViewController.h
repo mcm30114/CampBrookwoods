@@ -19,9 +19,6 @@
 	
 	UIPickerView *pv;
 	int selectedSession;
-	
-	NSDate *today;
-	NSDate *campStart;
 }
 
 -(void) updateCountdownView;
