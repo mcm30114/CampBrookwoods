@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* CampBrookwoodsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* CampBrookwoodsAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* CampBrookwoodsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* CampBrookwoodsViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* CampBrookwoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* CampBrookwoodsViewController.m */; };
+		383E594712C130BF00B104D3 /* RSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 383E594612C130BF00B104D3 /* RSSParser.m */; };
+		383E5A5C12C1431B00B104D3 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383E5A5A12C1431B00B104D3 /* ArticleViewController.m */; };
+		383E5A5D12C1431B00B104D3 /* ArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383E5A5B12C1431B00B104D3 /* ArticleViewController.xib */; };
+		383E5ADC12C1495300B104D3 /* UINavigationBar+CustomBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 383E5ADB12C1495300B104D3 /* UINavigationBar+CustomBackground.m */; };
+		384B6F8812CA385800A0E5FE /* AlertSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384B6F8612CA385800A0E5FE /* AlertSignupViewController.m */; };
+		384B6F8912CA385800A0E5FE /* AlertSignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384B6F8712CA385800A0E5FE /* AlertSignupViewController.xib */; };
+		384B6FA512CA4A9200A0E5FE /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 384B6FA412CA4A9200A0E5FE /* checkmark.png */; };
+		3880F23112BFB1ED00415311 /* WebcamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3880F22F12BFB1ED00415311 /* WebcamViewController.m */; };
+		3880F23212BFB1ED00415311 /* WebcamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3880F23012BFB1ED00415311 /* WebcamViewController.xib */; };
+		3880F23712BFB20800415311 /* CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3880F23512BFB20800415311 /* CountdownViewController.m */; };
+		3880F23812BFB20800415311 /* CountdownViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3880F23612BFB20800415311 /* CountdownViewController.xib */; };
+		3880F27412BFBBEF00415311 /* noWebcamForYou.png in Resources */ = {isa = PBXBuildFile; fileRef = 3880F27312BFBBEF00415311 /* noWebcamForYou.png */; };
+		3880F2E712BFD9DB00415311 /* Icon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3880F2E512BFD9DB00415311 /* Icon.m */; };
+		3880F2E812BFD9DB00415311 /* Icon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3880F2E612BFD9DB00415311 /* Icon.xib */; };
+		3880F33012BFE2D000415311 /* webcam.png in Resources */ = {isa = PBXBuildFile; fileRef = 3880F32F12BFE2D000415311 /* webcam.png */; };
+		3880F3A612BFEF3000415311 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 3880F3A512BFEF3000415311 /* news.png */; };
+		3880F3AF12BFF02700415311 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3880F3AD12BFF02700415311 /* NewsViewController.m */; };
+		3880F3B012BFF02700415311 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3880F3AE12BFF02700415311 /* NewsViewController.xib */; };
+		3880F4B512C000FA00415311 /* tree bark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3880F4B412C000FA00415311 /* tree bark.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* CampBrookwoodsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampBrookwoodsAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* CampBrookwoodsAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampBrookwoodsAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* CampBrookwoods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampBrookwoods.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* CampBrookwoodsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CampBrookwoodsViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* CampBrookwoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampBrookwoodsViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* CampBrookwoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampBrookwoodsViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* CampBrookwoods_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampBrookwoods_Prefix.pch; sourceTree = "<group>"; };
+		383E594512C130BF00B104D3 /* RSSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSParser.h; sourceTree = "<group>"; };
+		383E594612C130BF00B104D3 /* RSSParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSParser.m; sourceTree = "<group>"; };
+		383E5A5912C1431B00B104D3 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
+		383E5A5A12C1431B00B104D3 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
+		383E5A5B12C1431B00B104D3 /* ArticleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleViewController.xib; sourceTree = "<group>"; };
+		383E5ADA12C1495300B104D3 /* UINavigationBar+CustomBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+CustomBackground.h"; sourceTree = "<group>"; };
+		383E5ADB12C1495300B104D3 /* UINavigationBar+CustomBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+CustomBackground.m"; sourceTree = "<group>"; };
+		384B6F8512CA385800A0E5FE /* AlertSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertSignupViewController.h; sourceTree = "<group>"; };
+		384B6F8612CA385800A0E5FE /* AlertSignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertSignupViewController.m; sourceTree = "<group>"; };
+		384B6F8712CA385800A0E5FE /* AlertSignupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertSignupViewController.xib; sourceTree = "<group>"; };
+		384B6FA412CA4A9200A0E5FE /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		3880F22E12BFB1ED00415311 /* WebcamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebcamViewController.h; sourceTree = "<group>"; };
+		3880F22F12BFB1ED00415311 /* WebcamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebcamViewController.m; sourceTree = "<group>"; };
+		3880F23012BFB1ED00415311 /* WebcamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebcamViewController.xib; sourceTree = "<group>"; };
+		3880F23412BFB20800415311 /* CountdownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownViewController.h; sourceTree = "<group>"; };
+		3880F23512BFB20800415311 /* CountdownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownViewController.m; sourceTree = "<group>"; };
+		3880F23612BFB20800415311 /* CountdownViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountdownViewController.xib; sourceTree = "<group>"; };
+		3880F27312BFBBEF00415311 /* noWebcamForYou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noWebcamForYou.png; sourceTree = "<group>"; };
+		3880F2BF12BFD55600415311 /* CampStartDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampStartDate.h; sourceTree = "<group>"; };
+		3880F2E412BFD9DB00415311 /* Icon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Icon.h; sourceTree = "<group>"; };
+		3880F2E512BFD9DB00415311 /* Icon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Icon.m; sourceTree = "<group>"; };
+		3880F2E612BFD9DB00415311 /* Icon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Icon.xib; sourceTree = "<group>"; };
+		3880F32F12BFE2D000415311 /* webcam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = webcam.png; sourceTree = "<group>"; };
+		3880F3A512BFEF3000415311 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
+		3880F3AC12BFF02700415311 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		3880F3AD12BFF02700415311 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		3880F3AE12BFF02700415311 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		3880F4B412C000FA00415311 /* tree bark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tree bark.png"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* CampBrookwoods-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CampBrookwoods-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				384B6F8312CA383C00A0E5FE /* AlertSignupViewController */,
+				383E5AD912C1491B00B104D3 /* CustomBackground */,
+				3880F3AB12BFF01200415311 /* NewsViewController */,
+				3880F2E312BFD99B00415311 /* Icon */,
+				3880F23312BFB1F300415311 /* CountdownViewController */,
+				3880F22D12BFB1D400415311 /* WebcamViewController */,
+				1D3623240D0F684500981E51 /* CampBrookwoodsAppDelegate.h */,
+				1D3623250D0F684500981E51 /* CampBrookwoodsAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* CampBrookwoodsViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* CampBrookwoodsViewController.m */,
+				3880F2BF12BFD55600415311 /* CampStartDate.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* CampBrookwoods.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* CampBrookwoods_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				384B6FA412CA4A9200A0E5FE /* checkmark.png */,
+				3880F4B412C000FA00415311 /* tree bark.png */,
+				3880F3A512BFEF3000415311 /* news.png */,
+				3880F32F12BFE2D000415311 /* webcam.png */,
+				3880F27312BFBBEF00415311 /* noWebcamForYou.png */,
+				2899E5210DE3E06400AC0155 /* CampBrookwoodsViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* CampBrookwoods-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		383E594812C130C800B104D3 /* RSSParser */ = {
+			isa = PBXGroup;
+			children = (
+				383E594512C130BF00B104D3 /* RSSParser.h */,
+				383E594612C130BF00B104D3 /* RSSParser.m */,
+			);
+			name = RSSParser;
+			sourceTree = "<group>";
+		};
+		383E5A5812C142FE00B104D3 /* ArticleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				383E5A5912C1431B00B104D3 /* ArticleViewController.h */,
+				383E5A5A12C1431B00B104D3 /* ArticleViewController.m */,
+				383E5A5B12C1431B00B104D3 /* ArticleViewController.xib */,
+			);
+			name = ArticleViewController;
+			sourceTree = "<group>";
+		};
+		383E5AD912C1491B00B104D3 /* CustomBackground */ = {
+			isa = PBXGroup;
+			children = (
+				383E5ADA12C1495300B104D3 /* UINavigationBar+CustomBackground.h */,
+				383E5ADB12C1495300B104D3 /* UINavigationBar+CustomBackground.m */,
+			);
+			name = CustomBackground;
+			sourceTree = "<group>";
+		};
+		384B6F8312CA383C00A0E5FE /* AlertSignupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				384B6F8512CA385800A0E5FE /* AlertSignupViewController.h */,
+				384B6F8612CA385800A0E5FE /* AlertSignupViewController.m */,
+				384B6F8712CA385800A0E5FE /* AlertSignupViewController.xib */,
+			);
+			name = AlertSignupViewController;
+			sourceTree = "<group>";
+		};
+		3880F22D12BFB1D400415311 /* WebcamViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3880F22E12BFB1ED00415311 /* WebcamViewController.h */,
+				3880F22F12BFB1ED00415311 /* WebcamViewController.m */,
+				3880F23012BFB1ED00415311 /* WebcamViewController.xib */,
+			);
+			name = WebcamViewController;
+			sourceTree = "<group>";
+		};
+		3880F23312BFB1F300415311 /* CountdownViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3880F23412BFB20800415311 /* CountdownViewController.h */,
+				3880F23512BFB20800415311 /* CountdownViewController.m */,
+				3880F23612BFB20800415311 /* CountdownViewController.xib */,
+			);
+			name = CountdownViewController;
+			sourceTree = "<group>";
+		};
+		3880F2E312BFD99B00415311 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				3880F2E412BFD9DB00415311 /* Icon.h */,
+				3880F2E512BFD9DB00415311 /* Icon.m */,
+				3880F2E612BFD9DB00415311 /* Icon.xib */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+		3880F3AB12BFF01200415311 /* NewsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				383E5A5812C142FE00B104D3 /* ArticleViewController */,
+				383E594812C130C800B104D3 /* RSSParser */,
+				3880F3AC12BFF02700415311 /* NewsViewController.h */,
+				3880F3AD12BFF02700415311 /* NewsViewController.m */,
+				3880F3AE12BFF02700415311 /* NewsViewController.xib */,
+			);
+			name = NewsViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* CampBrookwoods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CampBrookwoods" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CampBrookwoods;
+			productName = CampBrookwoods;
+			productReference = 1D6058910D05DD3D006BFB54 /* CampBrookwoods.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CampBrookwoods" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* CampBrookwoods */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* CampBrookwoodsViewController.xib in Resources */,
+				3880F23212BFB1ED00415311 /* WebcamViewController.xib in Resources */,
+				3880F23812BFB20800415311 /* CountdownViewController.xib in Resources */,
+				3880F27412BFBBEF00415311 /* noWebcamForYou.png in Resources */,
+				3880F2E812BFD9DB00415311 /* Icon.xib in Resources */,
+				3880F33012BFE2D000415311 /* webcam.png in Resources */,
+				3880F3A612BFEF3000415311 /* news.png in Resources */,
+				3880F3B012BFF02700415311 /* NewsViewController.xib in Resources */,
+				3880F4B512C000FA00415311 /* tree bark.png in Resources */,
+				383E5A5D12C1431B00B104D3 /* ArticleViewController.xib in Resources */,
+				384B6F8912CA385800A0E5FE /* AlertSignupViewController.xib in Resources */,
+				384B6FA512CA4A9200A0E5FE /* checkmark.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* CampBrookwoodsAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* CampBrookwoodsViewController.m in Sources */,
+				3880F23112BFB1ED00415311 /* WebcamViewController.m in Sources */,
+				3880F23712BFB20800415311 /* CountdownViewController.m in Sources */,
+				3880F2E712BFD9DB00415311 /* Icon.m in Sources */,
+				3880F3AF12BFF02700415311 /* NewsViewController.m in Sources */,
+				383E594712C130BF00B104D3 /* RSSParser.m in Sources */,
+				383E5A5C12C1431B00B104D3 /* ArticleViewController.m in Sources */,
+				383E5ADC12C1495300B104D3 /* UINavigationBar+CustomBackground.m in Sources */,
+				384B6F8812CA385800A0E5FE /* AlertSignupViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CampBrookwoods_Prefix.pch;
+				INFOPLIST_FILE = "CampBrookwoods-Info.plist";
+				PRODUCT_NAME = CampBrookwoods;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CampBrookwoods_Prefix.pch;
+				INFOPLIST_FILE = "CampBrookwoods-Info.plist";
+				PRODUCT_NAME = CampBrookwoods;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CampBrookwoods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CampBrookwoods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
