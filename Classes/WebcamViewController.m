@@ -47,13 +47,15 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Connection Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
 	[alert show];
 	[self.webcamView loadRequest:[NSURLRequest requestWithURL:[[NSBundle mainBundle] URLForResource:@"noWebcamForYou" withExtension:@"png"]]];
 }
 
 -(IBAction) returnToMainMenu
 {
+	self.webcamView.delegate = nil;
+	[self.webcamView stopLoading];
 	[self dismissModalViewControllerAnimated:YES];
 }
 
