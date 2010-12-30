@@ -8,22 +8,26 @@
 
 #import "CountdownViewController.h"
 
-#import "CampStartDate.h"
+#define	MONTH 06
 
 @implementation CountdownViewController
 
 @synthesize months, days, hours, minutes, sessionLabel;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-/*
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization.
+		campStartingDates = [[[NSArray alloc] initWithObjects:
+							 [NSNumber numberWithInt:26], [NSNumber numberWithInt:24], [NSNumber numberWithInt:23], [NSNumber numberWithInt:22], [NSNumber numberWithInt:21],
+							 [NSNumber numberWithInt:26], [NSNumber numberWithInt:25], [NSNumber numberWithInt:24], [NSNumber numberWithInt:23], [NSNumber numberWithInt:21], nil
+							  ] autorelease];
+		[campStartingDates retain];
     }
     return self;
 }
-*/
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -39,16 +43,28 @@
 	NSDate *today = [[[NSDate alloc] init] autorelease];
 	[today retain];
 	
+	//create calenday
+	NSCalendar *gregorian = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+	[gregorian retain];
+	
 	//setup camp date
 	NSDateComponents *components= [[[NSDateComponents alloc] init] autorelease];
 	[components retain];
 	
-	[components setDay:DAY];
-	[components setMonth:MONTH];
-	[components setYear:YEAR];
+	 // index for years' start date
 	
-	NSCalendar *gregorian = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
-	[gregorian retain];
+	if([[gregorian components:NSMonthCalendarUnit fromDate:today] month] > 7)
+	{
+		[components setDay:[[campStartingDates objectAtIndex:[[gregorian components:NSYearCalendarUnit fromDate:today] year] - 2011 + 1] intValue]];
+		[components setMonth:MONTH];
+		[components setYear:[[gregorian components:NSYearCalendarUnit fromDate:today] year] + 1];
+	}
+	else
+	{
+		[components setDay:[[campStartingDates objectAtIndex:[[gregorian components:NSYearCalendarUnit fromDate:today] year] - 2011] intValue]];
+		[components setMonth:MONTH];
+		[components setYear:[[gregorian components:NSYearCalendarUnit fromDate:today] year]];
+	}
 	
 	//set date then adjust for session
 	NSDate *campStart = [gregorian dateFromComponents:components];
@@ -174,6 +190,7 @@
 
 
 - (void)dealloc {
+	[campStartingDates release];
     [super dealloc];
 }
 

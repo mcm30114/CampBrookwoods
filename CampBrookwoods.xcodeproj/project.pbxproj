@@ -31,12 +31,12 @@
 		3880F2E812BFD9DB00415311 /* Icon.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3880F2E612BFD9DB00415311 /* Icon.xib */; };
 		3880F3AF12BFF02700415311 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3880F3AD12BFF02700415311 /* NewsViewController.m */; };
 		3880F3B012BFF02700415311 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3880F3AE12BFF02700415311 /* NewsViewController.xib */; };
+		3886B5BB12CCE74D00EC0F98 /* webcam.png in Resources */ = {isa = PBXBuildFile; fileRef = 3886B5BA12CCE74D00EC0F98 /* webcam.png */; };
 		38D9FC4B12CBBEA300164E85 /* sampleRSS.xml in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FC4A12CBBEA300164E85 /* sampleRSS.xml */; };
 		38D9FC7612CBC69400164E85 /* Countdown-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FC7512CBC69400164E85 /* Countdown-Background.png */; };
 		38D9FC7C12CBC78B00164E85 /* Main-Background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FC7B12CBC78B00164E85 /* Main-Background2.png */; };
 		38D9FC8512CBC92400164E85 /* NavBar-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FC8412CBC92400164E85 /* NavBar-Background.png */; };
 		38D9FCDD12CBCEBD00164E85 /* Main-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FCDC12CBCEBD00164E85 /* Main-Background.png */; };
-		38D9FD1612CBD97500164E85 /* webcam.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FD1512CBD97500164E85 /* webcam.png */; };
 		38D9FD1A12CBD9E900164E85 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FD1912CBD9E900164E85 /* news.png */; };
 		38D9FD1E12CBDA4E00164E85 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FD1D12CBDA4E00164E85 /* email.png */; };
 		38D9FDB112CBE81300164E85 /* BWDRApp-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FDB012CBE81300164E85 /* BWDRApp-Icon.png */; };
@@ -73,19 +73,18 @@
 		3880F23512BFB20800415311 /* CountdownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownViewController.m; sourceTree = "<group>"; };
 		3880F23612BFB20800415311 /* CountdownViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountdownViewController.xib; sourceTree = "<group>"; };
 		3880F27312BFBBEF00415311 /* noWebcamForYou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noWebcamForYou.png; sourceTree = "<group>"; };
-		3880F2BF12BFD55600415311 /* CampStartDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampStartDate.h; sourceTree = "<group>"; };
 		3880F2E412BFD9DB00415311 /* Icon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Icon.h; sourceTree = "<group>"; };
 		3880F2E512BFD9DB00415311 /* Icon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Icon.m; sourceTree = "<group>"; };
 		3880F2E612BFD9DB00415311 /* Icon.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Icon.xib; sourceTree = "<group>"; };
 		3880F3AC12BFF02700415311 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		3880F3AD12BFF02700415311 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		3880F3AE12BFF02700415311 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		3886B5BA12CCE74D00EC0F98 /* webcam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = webcam.png; sourceTree = "<group>"; };
 		38D9FC4A12CBBEA300164E85 /* sampleRSS.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sampleRSS.xml; sourceTree = "<group>"; };
 		38D9FC7512CBC69400164E85 /* Countdown-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Countdown-Background.png"; sourceTree = "<group>"; };
 		38D9FC7B12CBC78B00164E85 /* Main-Background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main-Background2.png"; sourceTree = "<group>"; };
 		38D9FC8412CBC92400164E85 /* NavBar-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBar-Background.png"; sourceTree = "<group>"; };
 		38D9FCDC12CBCEBD00164E85 /* Main-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main-Background.png"; sourceTree = "<group>"; };
-		38D9FD1512CBD97500164E85 /* webcam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = webcam.png; sourceTree = "<group>"; };
 		38D9FD1912CBD9E900164E85 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
 		38D9FD1D12CBDA4E00164E85 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		38D9FDB012CBE81300164E85 /* BWDRApp-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BWDRApp-Icon.png"; sourceTree = "<group>"; };
@@ -119,7 +118,6 @@
 				1D3623250D0F684500981E51 /* CampBrookwoodsAppDelegate.m */,
 				28D7ACF60DDB3853001CB0EB /* CampBrookwoodsViewController.h */,
 				28D7ACF70DDB3853001CB0EB /* CampBrookwoodsViewController.m */,
-				3880F2BF12BFD55600415311 /* CampStartDate.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -156,10 +154,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3886B5BA12CCE74D00EC0F98 /* webcam.png */,
 				38D9FDB012CBE81300164E85 /* BWDRApp-Icon.png */,
 				38D9FD1D12CBDA4E00164E85 /* email.png */,
 				38D9FD1912CBD9E900164E85 /* news.png */,
-				38D9FD1512CBD97500164E85 /* webcam.png */,
 				38D9FCDC12CBCEBD00164E85 /* Main-Background.png */,
 				38D9FC8412CBC92400164E85 /* NavBar-Background.png */,
 				38D9FC7B12CBC78B00164E85 /* Main-Background2.png */,
@@ -328,10 +326,10 @@
 				38D9FC7C12CBC78B00164E85 /* Main-Background2.png in Resources */,
 				38D9FC8512CBC92400164E85 /* NavBar-Background.png in Resources */,
 				38D9FCDD12CBCEBD00164E85 /* Main-Background.png in Resources */,
-				38D9FD1612CBD97500164E85 /* webcam.png in Resources */,
 				38D9FD1A12CBD9E900164E85 /* news.png in Resources */,
 				38D9FD1E12CBDA4E00164E85 /* email.png in Resources */,
 				38D9FDB112CBE81300164E85 /* BWDRApp-Icon.png in Resources */,
+				3886B5BB12CCE74D00EC0F98 /* webcam.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

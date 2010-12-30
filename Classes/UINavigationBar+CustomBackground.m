@@ -18,7 +18,7 @@
 	
 	UILabel *topLabel = [[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 44)] autorelease];
 	topLabel.text = self.topItem.title;
-	topLabel.font = [UIFont fontWithName:@"MarkerFelt-Thin" size:28];
+	topLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:22];
 	topLabel.backgroundColor = [UIColor clearColor];
 	topLabel.textAlignment = UITextAlignmentCenter;
 	topLabel.textColor = [UIColor blackColor];

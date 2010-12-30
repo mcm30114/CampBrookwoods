@@ -65,9 +65,9 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Countdown to Camp</string>
-						<object class="NSFont" key="IBUIFont" id="535085804">
+						<object class="NSFont" key="IBUIFont">
 							<string key="NSName">Helvetica-Bold</string>
-							<double key="NSSize">24</double>
+							<double key="NSSize">22</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<object class="NSColor" key="IBUITextColor" id="992534558">
@@ -93,7 +93,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Session 1</string>
-						<object class="NSFont" key="IBUIFont" id="615996060">
+						<object class="NSFont" key="IBUIFont" id="835641508">
 							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">18</double>
 							<int key="NSfFlags">16</int>
@@ -115,7 +115,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Months</string>
-						<reference key="IBUIFont" ref="615996060"/>
+						<reference key="IBUIFont" ref="835641508"/>
 						<reference key="IBUITextColor" ref="992534558"/>
 						<reference key="IBUIHighlightedColor" ref="982915835"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -133,7 +133,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Hours</string>
-						<reference key="IBUIFont" ref="615996060"/>
+						<reference key="IBUIFont" ref="835641508"/>
 						<reference key="IBUITextColor" ref="992534558"/>
 						<reference key="IBUIHighlightedColor" ref="982915835"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -151,7 +151,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Minutes</string>
-						<reference key="IBUIFont" ref="615996060"/>
+						<reference key="IBUIFont" ref="835641508"/>
 						<reference key="IBUITextColor" ref="992534558"/>
 						<reference key="IBUIHighlightedColor" ref="982915835"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -169,7 +169,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">Days</string>
-						<reference key="IBUIFont" ref="615996060"/>
+						<reference key="IBUIFont" ref="835641508"/>
 						<reference key="IBUITextColor" ref="992534558"/>
 						<reference key="IBUIHighlightedColor" ref="982915835"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -186,8 +186,12 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Months</string>
-						<reference key="IBUIFont" ref="535085804"/>
+						<string key="IBUIText">M</string>
+						<object class="NSFont" key="IBUIFont" id="510692138">
+							<string key="NSName">Helvetica-Bold</string>
+							<double key="NSSize">24</double>
+							<int key="NSfFlags">16</int>
+						</object>
 						<reference key="IBUITextColor" ref="992534558"/>
 						<reference key="IBUIHighlightedColor" ref="982915835"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -204,8 +208,8 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Hours</string>
-						<reference key="IBUIFont" ref="535085804"/>
+						<string key="IBUIText">H</string>
+						<reference key="IBUIFont" ref="510692138"/>
 						<reference key="IBUITextColor" ref="992534558"/>
 						<reference key="IBUIHighlightedColor" ref="982915835"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -222,8 +226,8 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Minutes</string>
-						<reference key="IBUIFont" ref="535085804"/>
+						<string key="IBUIText">M</string>
+						<reference key="IBUIFont" ref="510692138"/>
 						<reference key="IBUITextColor" ref="992534558"/>
 						<reference key="IBUIHighlightedColor" ref="982915835"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -240,8 +244,8 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">Days</string>
-						<reference key="IBUIFont" ref="535085804"/>
+						<string key="IBUIText">D</string>
+						<reference key="IBUIFont" ref="510692138"/>
 						<reference key="IBUITextColor" ref="992534558"/>
 						<reference key="IBUIHighlightedColor" ref="982915835"/>
 						<int key="IBUIBaselineAdjustment">1</int>
