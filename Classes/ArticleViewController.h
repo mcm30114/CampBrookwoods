@@ -15,6 +15,8 @@
 	
 	NSString *articleTitle;
 	NSString *article;
+    
+    NSMutableData *articleData;
 }
 
 @property (nonatomic, retain) IBOutlet UITextView *textArea;

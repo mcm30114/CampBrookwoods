@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RSSParser.h"
 
-
-@interface NewsViewController : UITableViewController
+@interface NewsViewController : UITableViewController <RSSParserDelegate>
 {
 	NSMutableArray *titles;
 	NSMutableArray *articles;
 }
 
 -(void)returnHome;
+
+- (void) RSSParserDidComplete;
 
 @end

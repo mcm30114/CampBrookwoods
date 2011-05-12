@@ -33,9 +33,14 @@
 	[articles retain];
 	
 	RSSParser *parser = [[[RSSParser alloc] init] autorelease];
-	[parser parseRSSFeedWithTitleArray:titles andArticlesArray:articles];
+    [parser setDelegate:self];
+	[parser parseRSSFeedWithTitleArray:&titles andArticlesArray:&articles];
 }
 
+- (void) RSSParserDidComplete
+{
+    [self.tableView reloadData];
+}
 
 /*
 - (void)viewWillAppear:(BOOL)animated {

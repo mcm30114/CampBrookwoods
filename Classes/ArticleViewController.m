@@ -29,8 +29,12 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSString *url = [article stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSURLConnection *articleConnection = [NSURLConnection connectionWithRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]] delegate:self];
+    [articleConnection start];
+    
 	self.navigationItem.title = articleTitle;
-	self.textArea.text = article;
 }
 
 /*
@@ -40,6 +44,32 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+#pragma mark NSURLConnection Delegate Methods
+
+- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    if(!articleData)
+    {
+        articleData = [[[NSMutableData alloc] init] autorelease];
+        [articleData retain];
+    }
+    
+    [articleData appendData:data];
+}
+
+- (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    NSLog(@"Connection Failed with error: %@", [error localizedDescription]);
+    [articleData release];
+}
+
+- (void) connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    self.textArea.text = [NSString stringWithCString:[articleData bytes] encoding:NSUTF8StringEncoding];
+}
+
+#pragma mark Memory Management
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

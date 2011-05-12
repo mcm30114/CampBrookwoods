@@ -8,15 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol RSSParserDelegate
+
+- (void) RSSParserDidComplete;
+
+@end
 
 @interface RSSParser : NSObject <NSXMLParserDelegate>
 {
 	NSMutableArray *titles;
 	NSMutableArray *articles;
+    BOOL inItem;
 	
 	NSString *currentElement;
+    NSMutableData *connectionData;
+    
+    id <RSSParserDelegate> delegate;
 }
 
--(void)parseRSSFeedWithTitleArray:(NSMutableArray *)title andArticlesArray:(NSMutableArray *)article;
+-(void)parseRSSFeedWithTitleArray:(NSMutableArray **)title andArticlesArray:(NSMutableArray **)article;
+
+@property (nonatomic, assign) id <RSSParserDelegate> delegate;
 
 @end
