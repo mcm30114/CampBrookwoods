@@ -66,8 +66,37 @@
 
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    self.textArea.text = [NSString stringWithCString:[articleData bytes] encoding:NSUTF8StringEncoding];
+    NSString *HTML = [NSString stringWithCString:[articleData bytes] encoding:NSUTF8StringEncoding];
+    
+    NSXMLParser *contentParser = [[[NSXMLParser alloc] initWithData:articleData] autorelease];
+    [contentParser setDelegate:self];
+    [contentParser setShouldResolveExternalEntities:YES];
+    [contentParser parse];
+    
+    NSLog(@"%@", HTML);
 }
+
+#pragma mark NSXMLParser Delegate Methods
+
+- (void) parserDidStartDocument:(NSXMLParser *)parser
+{
+    contentString = [[[NSMutableString alloc] init] autorelease];
+    [contentString retain];
+}
+
+- (void) parserDidEndDocument:(NSXMLParser *)parser
+{
+    self.textArea.text = contentString;
+    [contentString release];
+}
+
+- (void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
+{
+    currentElement = elementName;
+    
+}
+
+- (void) parser
 
 #pragma mark Memory Management
 

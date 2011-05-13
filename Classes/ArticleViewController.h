@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ArticleViewController : UIViewController
+@interface ArticleViewController : UIViewController <NSXMLParserDelegate>
 {
 	IBOutlet UITextView *textArea;
 	
@@ -17,6 +17,9 @@
 	NSString *article;
     
     NSMutableData *articleData;
+    
+    NSMutableString *contentString;
+    NSString *currentElement;
 }
 
 @property (nonatomic, retain) IBOutlet UITextView *textArea;
