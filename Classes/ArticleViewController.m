@@ -67,13 +67,12 @@
 - (void) connectionDidFinishLoading:(NSURLConnection *)connection
 {
     NSString *HTML = [NSString stringWithCString:[articleData bytes] encoding:NSUTF8StringEncoding];
+    NSLog(@"%@", HTML);
     
     NSXMLParser *contentParser = [[[NSXMLParser alloc] initWithData:articleData] autorelease];
     [contentParser setDelegate:self];
-    [contentParser setShouldResolveExternalEntities:YES];
+    //[contentParser setShouldResolveExternalEntities:YES];
     [contentParser parse];
-    
-    NSLog(@"%@", HTML);
 }
 
 #pragma mark NSXMLParser Delegate Methods
@@ -90,13 +89,31 @@
     [contentString release];
 }
 
-- (void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
+- (void) parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError
 {
-    currentElement = elementName;
-    
+    NSLog(@"%@\nError found at: %d, %d", [parseError localizedDescription], [parser lineNumber], [parser columnNumber]);
+    UIAlertView *uav = [[[UIAlertView alloc] initWithTitle:@"Feed Error" message:@"RSS feed contains corrupt data. We apologize for the inconvenience." delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] autorelease];
+    [uav show];
+    [contentString release];
 }
 
-- (void) parser
+- (void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
+{
+    if([[attributeDict objectForKey:@"id"] isEqualToString:@"content"] && [elementName isEqualToString:@"div"])
+        currentElement = @"CONTENT_AREA";
+}
+
+- (void) parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
+{
+    if([currentElement isEqualToString:@"CONTENT_AREA"] && [elementName isEqualToString:@"div"])
+        currentElement = @"";
+}
+
+- (void) parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
+{
+    if([currentElement isEqualToString:@"CONTENT_AREA"])
+        [contentString appendString:string];
+}
 
 #pragma mark Memory Management
 
