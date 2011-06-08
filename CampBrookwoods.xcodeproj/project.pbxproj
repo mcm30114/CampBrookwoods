@@ -40,6 +40,8 @@
 		38D9FD1A12CBD9E900164E85 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FD1912CBD9E900164E85 /* news.png */; };
 		38D9FD1E12CBDA4E00164E85 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FD1D12CBDA4E00164E85 /* email.png */; };
 		38D9FDB112CBE81300164E85 /* BWDRApp-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FDB012CBE81300164E85 /* BWDRApp-Icon.png */; };
+		8330ECF9138CFCA500D960C3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8330ECF7138CFCA500D960C3 /* MapViewController.m */; };
+		8330ECFA138CFCA500D960C3 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8330ECF8138CFCA500D960C3 /* MapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,9 @@
 		38D9FD1912CBD9E900164E85 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
 		38D9FD1D12CBDA4E00164E85 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		38D9FDB012CBE81300164E85 /* BWDRApp-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BWDRApp-Icon.png"; sourceTree = "<group>"; };
+		8330ECF6138CFCA500D960C3 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		8330ECF7138CFCA500D960C3 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		8330ECF8138CFCA500D960C3 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CampBrookwoods-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CampBrookwoods-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +113,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8330ECF5138CFC8200D960C3 /* MapViewController */,
 				384B6F8312CA383C00A0E5FE /* AlertSignupViewController */,
 				383E5AD912C1491B00B104D3 /* CustomBackground */,
 				3880F3AB12BFF01200415311 /* NewsViewController */,
@@ -262,6 +268,16 @@
 			name = NewsViewController;
 			sourceTree = "<group>";
 		};
+		8330ECF5138CFC8200D960C3 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8330ECF6138CFCA500D960C3 /* MapViewController.h */,
+				8330ECF7138CFCA500D960C3 /* MapViewController.m */,
+				8330ECF8138CFCA500D960C3 /* MapViewController.xib */,
+			);
+			name = MapViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,6 +346,7 @@
 				38D9FD1E12CBDA4E00164E85 /* email.png in Resources */,
 				38D9FDB112CBE81300164E85 /* BWDRApp-Icon.png in Resources */,
 				3886B5BB12CCE74D00EC0F98 /* webcam.png in Resources */,
+				8330ECFA138CFCA500D960C3 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +368,7 @@
 				383E5A5C12C1431B00B104D3 /* ArticleViewController.m in Sources */,
 				383E5ADC12C1495300B104D3 /* UINavigationBar+CustomBackground.m in Sources */,
 				384B6F8812CA385800A0E5FE /* AlertSignupViewController.m in Sources */,
+				8330ECF9138CFCA500D960C3 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

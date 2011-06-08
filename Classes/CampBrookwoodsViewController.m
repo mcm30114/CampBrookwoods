@@ -90,13 +90,13 @@
 	if(icon == lawnWebcamIcon)
 	{
 		presentedViewController = [[[WebcamViewController alloc] initWithNibName:@"WebcamViewController" bundle:nil] autorelease];
-		((WebcamViewController *)presentedViewController).url = @"http://74.220.231.108:1031/axis-cgi/jpg/image.cgi?resolution=320x240&dummy=1268780229976";
+		((WebcamViewController *)presentedViewController).url = @"http://69.21.83.38:1031/axis-cgi/jpg/image.cgi?resolution=320x240&dummy=1268780229976";
 		((WebcamViewController *)presentedViewController).name = @"Front Lawn Camera";
 	}
 	if(icon == waterWebcamIcon)
 	{
 		presentedViewController = [[[WebcamViewController alloc] initWithNibName:@"WebcamViewController" bundle:nil] autorelease];
-		((WebcamViewController *)presentedViewController).url = @"http://74.220.231.108:1030/axis-cgi/jpg/image.cgi?resolution=320x240&dummy=1268780229976";
+		((WebcamViewController *)presentedViewController).url = @"http://69.21.83.38:1030/axis-cgi/jpg/image.cgi?resolution=320x240&dummy=1268780229976";
 		((WebcamViewController *)presentedViewController).name = @"Boat House Camera";
 	}
 	if(icon == newsIcon)
