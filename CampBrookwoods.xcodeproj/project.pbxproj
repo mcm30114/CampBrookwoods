@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,8 +16,6 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* CampBrookwoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* CampBrookwoodsViewController.m */; };
 		383E594712C130BF00B104D3 /* RSSParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 383E594612C130BF00B104D3 /* RSSParser.m */; };
-		383E5A5C12C1431B00B104D3 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383E5A5A12C1431B00B104D3 /* ArticleViewController.m */; };
-		383E5A5D12C1431B00B104D3 /* ArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383E5A5B12C1431B00B104D3 /* ArticleViewController.xib */; };
 		383E5ADC12C1495300B104D3 /* UINavigationBar+CustomBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 383E5ADB12C1495300B104D3 /* UINavigationBar+CustomBackground.m */; };
 		384B6F8812CA385800A0E5FE /* AlertSignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384B6F8612CA385800A0E5FE /* AlertSignupViewController.m */; };
 		384B6F8912CA385800A0E5FE /* AlertSignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384B6F8712CA385800A0E5FE /* AlertSignupViewController.xib */; };
@@ -40,8 +38,6 @@
 		38D9FD1A12CBD9E900164E85 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FD1912CBD9E900164E85 /* news.png */; };
 		38D9FD1E12CBDA4E00164E85 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FD1D12CBDA4E00164E85 /* email.png */; };
 		38D9FDB112CBE81300164E85 /* BWDRApp-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FDB012CBE81300164E85 /* BWDRApp-Icon.png */; };
-		8330ECF9138CFCA500D960C3 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8330ECF7138CFCA500D960C3 /* MapViewController.m */; };
-		8330ECFA138CFCA500D960C3 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8330ECF8138CFCA500D960C3 /* MapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,9 +55,6 @@
 		32CA4F630368D1EE00C91783 /* CampBrookwoods_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampBrookwoods_Prefix.pch; sourceTree = "<group>"; };
 		383E594512C130BF00B104D3 /* RSSParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSParser.h; sourceTree = "<group>"; };
 		383E594612C130BF00B104D3 /* RSSParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSParser.m; sourceTree = "<group>"; };
-		383E5A5912C1431B00B104D3 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
-		383E5A5A12C1431B00B104D3 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
-		383E5A5B12C1431B00B104D3 /* ArticleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleViewController.xib; sourceTree = "<group>"; };
 		383E5ADA12C1495300B104D3 /* UINavigationBar+CustomBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+CustomBackground.h"; sourceTree = "<group>"; };
 		383E5ADB12C1495300B104D3 /* UINavigationBar+CustomBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+CustomBackground.m"; sourceTree = "<group>"; };
 		384B6F8512CA385800A0E5FE /* AlertSignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertSignupViewController.h; sourceTree = "<group>"; };
@@ -90,9 +83,6 @@
 		38D9FD1912CBD9E900164E85 /* news.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news.png; sourceTree = "<group>"; };
 		38D9FD1D12CBDA4E00164E85 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		38D9FDB012CBE81300164E85 /* BWDRApp-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BWDRApp-Icon.png"; sourceTree = "<group>"; };
-		8330ECF6138CFCA500D960C3 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		8330ECF7138CFCA500D960C3 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		8330ECF8138CFCA500D960C3 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CampBrookwoods-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CampBrookwoods-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +103,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8330ECF5138CFC8200D960C3 /* MapViewController */,
 				384B6F8312CA383C00A0E5FE /* AlertSignupViewController */,
 				383E5AD912C1491B00B104D3 /* CustomBackground */,
 				3880F3AB12BFF01200415311 /* NewsViewController */,
@@ -197,16 +186,6 @@
 			name = RSSParser;
 			sourceTree = "<group>";
 		};
-		383E5A5812C142FE00B104D3 /* ArticleViewController */ = {
-			isa = PBXGroup;
-			children = (
-				383E5A5912C1431B00B104D3 /* ArticleViewController.h */,
-				383E5A5A12C1431B00B104D3 /* ArticleViewController.m */,
-				383E5A5B12C1431B00B104D3 /* ArticleViewController.xib */,
-			);
-			name = ArticleViewController;
-			sourceTree = "<group>";
-		};
 		383E5AD912C1491B00B104D3 /* CustomBackground */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,23 +238,12 @@
 		3880F3AB12BFF01200415311 /* NewsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				383E5A5812C142FE00B104D3 /* ArticleViewController */,
 				383E594812C130C800B104D3 /* RSSParser */,
 				3880F3AC12BFF02700415311 /* NewsViewController.h */,
 				3880F3AD12BFF02700415311 /* NewsViewController.m */,
 				3880F3AE12BFF02700415311 /* NewsViewController.xib */,
 			);
 			name = NewsViewController;
-			sourceTree = "<group>";
-		};
-		8330ECF5138CFC8200D960C3 /* MapViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8330ECF6138CFCA500D960C3 /* MapViewController.h */,
-				8330ECF7138CFCA500D960C3 /* MapViewController.m */,
-				8330ECF8138CFCA500D960C3 /* MapViewController.xib */,
-			);
-			name = MapViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,8 +271,11 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CampBrookwoods" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -334,7 +305,6 @@
 				3880F27412BFBBEF00415311 /* noWebcamForYou.png in Resources */,
 				3880F2E812BFD9DB00415311 /* Icon.xib in Resources */,
 				3880F3B012BFF02700415311 /* NewsViewController.xib in Resources */,
-				383E5A5D12C1431B00B104D3 /* ArticleViewController.xib in Resources */,
 				384B6F8912CA385800A0E5FE /* AlertSignupViewController.xib in Resources */,
 				384B6FA512CA4A9200A0E5FE /* checkmark.png in Resources */,
 				38D9FC4B12CBBEA300164E85 /* sampleRSS.xml in Resources */,
@@ -346,7 +316,6 @@
 				38D9FD1E12CBDA4E00164E85 /* email.png in Resources */,
 				38D9FDB112CBE81300164E85 /* BWDRApp-Icon.png in Resources */,
 				3886B5BB12CCE74D00EC0F98 /* webcam.png in Resources */,
-				8330ECFA138CFCA500D960C3 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,10 +334,8 @@
 				3880F2E712BFD9DB00415311 /* Icon.m in Sources */,
 				3880F3AF12BFF02700415311 /* NewsViewController.m in Sources */,
 				383E594712C130BF00B104D3 /* RSSParser.m in Sources */,
-				383E5A5C12C1431B00B104D3 /* ArticleViewController.m in Sources */,
 				383E5ADC12C1495300B104D3 /* UINavigationBar+CustomBackground.m in Sources */,
 				384B6F8812CA385800A0E5FE /* AlertSignupViewController.m in Sources */,
-				8330ECF9138CFCA500D960C3 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,9 +376,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
 				SDKROOT = iphonesimulator4.1;
 			};
 			name = Debug;
@@ -423,10 +390,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PREBINDING = NO;
 				SDKROOT = iphonesimulator4.1;
 			};
 			name = Release;

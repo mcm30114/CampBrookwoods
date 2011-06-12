@@ -10,6 +10,7 @@
 #import "CountdownViewController.h"
 #import "RSSParser.h"
 #import "ArticleViewController.h"
+#import "CampBrookwoodsAppDelegate.h"
 
 @implementation NewsViewController
 
@@ -153,19 +154,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
-	
-	ArticleViewController *avc = [[[ArticleViewController alloc] initWithNibName:@"ArticleViewController" bundle:nil] autorelease];
-	avc.articleTitle = [titles objectAtIndex:indexPath.row];
-	avc.article = [articles objectAtIndex:indexPath.row];
-	
-	[self.navigationController pushViewController:avc animated:YES];
+    
+	NSString *articleURLString = [[articles objectAtIndex:indexPath.row]stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:articleURLString]];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 
