@@ -13,15 +13,16 @@
 {
 	IBOutlet UINavigationBar *navBar;
 	IBOutlet UIActivityIndicatorView *aiv;
-	IBOutlet UIWebView *webcamView;
+	IBOutlet UIImageView *webcamView;
 	NSString *url;
 	NSString *name;
+    NSMutableData *imageData;
 }
 
 -(void)updateCamera;
 -(IBAction) returnToMainMenu;
 
-@property (nonatomic, retain) IBOutlet UIWebView *webcamView;
+@property (nonatomic, retain) IBOutlet UIImageView *webcamView;
 @property (nonatomic, retain) IBOutlet UINavigationBar *navBar;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *aiv;
 @property (assign) NSString *url;

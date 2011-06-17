@@ -76,11 +76,11 @@
     // e.g. self.myOutlet = nil;
 	self.thumbnail = nil;
 	self.label = nil;
+    self.delegate = nil;
 }
 
 
 - (void)dealloc {
-	[self.delegate release];
     [super dealloc];
 }
 

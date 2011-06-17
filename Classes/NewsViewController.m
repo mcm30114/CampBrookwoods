@@ -9,7 +9,6 @@
 #import "NewsViewController.h"
 #import "CountdownViewController.h"
 #import "RSSParser.h"
-#import "ArticleViewController.h"
 #import "CampBrookwoodsAppDelegate.h"
 
 @implementation NewsViewController

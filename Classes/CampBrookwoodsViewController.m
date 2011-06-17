@@ -53,21 +53,21 @@
 	[newsIcon retain];
 	newsIcon.delegate = self;
 	
-	//create rss icon
-	alertSignup = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"email.png"] name:@"Sign Up\nFor Alerts"] autorelease];
-	[alertSignup retain];
-	alertSignup.delegate = self;
+	//create directions icon
+	directions = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"maps.png"] name:@"Directions\nto Camp"] autorelease];
+	[directions retain];
+	directions.delegate = self;
 	
 	//add icons to view
 	[self.view addSubview:lawnWebcamIcon.view];
 	[self.view addSubview:waterWebcamIcon.view];
 	[self.view addSubview:newsIcon.view];
-	[self.view addSubview:alertSignup.view];
+	[self.view addSubview:directions.view];
 	
 	lawnWebcamIcon.view.frame = CGRectMake(68, 70, lawnWebcamIcon.view.frame.size.width, lawnWebcamIcon.view.frame.size.height);
 	waterWebcamIcon.view.frame = CGRectMake(68, 170, lawnWebcamIcon.view.frame.size.width, lawnWebcamIcon.view.frame.size.height);
 	newsIcon.view.frame = CGRectMake(188, 70, newsIcon.view.frame.size.width, newsIcon.view.frame.size.height);
-	alertSignup.view.frame = CGRectMake(188, 170, alertSignup.view.frame.size.width, newsIcon.view.frame.size.height);
+	directions.view.frame = CGRectMake(188, 170, directions.view.frame.size.width, newsIcon.view.frame.size.height);
 	
 	//add countdown to view
 	cvc = [[[CountdownViewController alloc] initWithNibName:@"CountdownViewController" bundle:nil] autorelease];
@@ -87,29 +87,33 @@
 -(void)iconWasTapped:(Icon *)icon
 {
 	id presentedViewController = nil;
-	if(icon == lawnWebcamIcon)
+    if(icon == directions)
 	{
-		presentedViewController = [[[WebcamViewController alloc] initWithNibName:@"WebcamViewController" bundle:nil] autorelease];
-		((WebcamViewController *)presentedViewController).url = @"http://69.21.83.38:1031/axis-cgi/jpg/image.cgi?resolution=320x240&dummy=1268780229976";
-		((WebcamViewController *)presentedViewController).name = @"Front Lawn Camera";
+		// open up maps
+        NSString *urlString = @"http://maps.google.com/maps?saddr=My%20Location&daddr=34%20Camp%20Brookwoods%20Road%20Alton,NH";
+        //NSString *urlString = @"http://google.com";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 	}
-	if(icon == waterWebcamIcon)
-	{
-		presentedViewController = [[[WebcamViewController alloc] initWithNibName:@"WebcamViewController" bundle:nil] autorelease];
-		((WebcamViewController *)presentedViewController).url = @"http://69.21.83.38:1030/axis-cgi/jpg/image.cgi?resolution=320x240&dummy=1268780229976";
-		((WebcamViewController *)presentedViewController).name = @"Boat House Camera";
-	}
-	if(icon == newsIcon)
-	{
-		presentedViewController	= [[[UINavigationController alloc] initWithRootViewController:[[[NewsViewController alloc] initWithNibName:@"NewsViewController" bundle:nil] autorelease]] autorelease];
-	}
-	if(icon == alertSignup)
-	{
-		//create alert sign-up view controller here
-		presentedViewController = [[[AlertSignupViewController alloc] initWithNibName:@"AlertSignupViewController" bundle:nil] autorelease];
-	}
-	
-	[self presentModalViewController:presentedViewController animated:YES];
+    else
+    {
+        if(icon == lawnWebcamIcon)
+        {
+            presentedViewController = [[[WebcamViewController alloc] init] autorelease];
+            ((WebcamViewController *)presentedViewController).url = @"http://69.21.83.38:1031/axis-cgi/jpg/image.cgi?resolution=640x480";
+            ((WebcamViewController *)presentedViewController).name = @"Front Lawn Camera";
+        }
+        if(icon == waterWebcamIcon)
+        {
+            presentedViewController = [[[WebcamViewController alloc] init] autorelease];
+            ((WebcamViewController *)presentedViewController).url = @"http://69.21.83.38:8000/control/faststream.jpg?preview&size=600x320&framecount=1";
+            ((WebcamViewController *)presentedViewController).name = @"Boat House Camera";
+        }
+        if(icon == newsIcon)
+        {
+            presentedViewController	= [[[UINavigationController alloc] initWithRootViewController:[[[NewsViewController alloc] initWithNibName:@"NewsViewController" bundle:nil] autorelease]] autorelease];
+        }
+        [self presentModalViewController:presentedViewController animated:YES];
+    }
 }
 
 #pragma mark -

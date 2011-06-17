@@ -30,33 +30,55 @@
     [super viewDidLoad];
 	[self.aiv startAnimating];
 	self.navBar.topItem.title = name;
-	[self performSelector:@selector(updateCamera) withObject:nil afterDelay:0.1];
-	webcamView.delegate = self;
+    self.navBar.topItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(returnToMainMenu)] autorelease];
+	[self updateCamera];
 }
 
 -(void)updateCamera
 {
 	self.aiv.hidesWhenStopped = YES;
-	[webcamView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:0 timeoutInterval:8]];
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView
-{
-	[self.aiv stopAnimating];
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
-{
-	UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Connection Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
-	[alert show];
-	[self.webcamView loadRequest:[NSURLRequest requestWithURL:[[NSBundle mainBundle] URLForResource:@"noWebcamForYou" withExtension:@"png"]]];
+    
+    NSURLRequest *webcamRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    NSURLConnection *webcamConnection = [[[NSURLConnection alloc] initWithRequest:webcamRequest delegate:self] autorelease];
+    imageData = [[[NSMutableData alloc] init] autorelease];
+    [imageData retain];
+    
+    [webcamConnection start];
+    [self.aiv startAnimating];
 }
 
 -(IBAction) returnToMainMenu
 {
-	self.webcamView.delegate = nil;
-	[self.webcamView stopLoading];
 	[self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark NSURLConnection Asynchronous Methods
+
+- (void) connection:(NSURLConnection *)connection didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
+{
+    NSLog(@"%d", bytesWritten);
+}
+
+- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    [imageData appendData:data];
+}
+
+- (void) connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    UIImage *webcamImage = [UIImage imageWithData:imageData];
+    webcamView.image = webcamImage;
+    [self.aiv stopAnimating];
+    [imageData release];
+}
+
+- (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    [self.aiv stopAnimating];
+    [imageData release];
+    UIAlertView *uav = [[[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"Could not connect to the webcam. Please try again later." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [uav show];
+    [self returnToMainMenu];
 }
 
 /*
@@ -82,7 +104,6 @@
 	self.navBar = nil;
 	self.aiv = nil;
 }
-
 
 - (void)dealloc {
     [super dealloc];

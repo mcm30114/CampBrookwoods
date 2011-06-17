@@ -51,7 +51,7 @@
 	}
 	else
 	{
-		UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Email Mismatch" message:@"Please enter valid matching emails" delegate:self cancelButtonTitle:@"Try Again" otherButtonTitles:nil];
+		UIAlertView *av = [[[UIAlertView alloc] initWithTitle:@"Email Mismatch" message:@"Please enter valid matching emails" delegate:self cancelButtonTitle:@"Try Again" otherButtonTitles:nil] autorelease];
 		[av show];
 	}
 }

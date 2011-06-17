@@ -38,6 +38,7 @@
 		38D9FD1A12CBD9E900164E85 /* news.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FD1912CBD9E900164E85 /* news.png */; };
 		38D9FD1E12CBDA4E00164E85 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FD1D12CBDA4E00164E85 /* email.png */; };
 		38D9FDB112CBE81300164E85 /* BWDRApp-Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 38D9FDB012CBE81300164E85 /* BWDRApp-Icon.png */; };
+		AA6D694113A58B4D006DDC70 /* maps.png in Resources */ = {isa = PBXBuildFile; fileRef = AA6D694013A58B4D006DDC70 /* maps.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		38D9FD1D12CBDA4E00164E85 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		38D9FDB012CBE81300164E85 /* BWDRApp-Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BWDRApp-Icon.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CampBrookwoods-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CampBrookwoods-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		AA6D694013A58B4D006DDC70 /* maps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maps.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				3886B5BA12CCE74D00EC0F98 /* webcam.png */,
 				38D9FDB012CBE81300164E85 /* BWDRApp-Icon.png */,
 				38D9FD1D12CBDA4E00164E85 /* email.png */,
+				AA6D694013A58B4D006DDC70 /* maps.png */,
 				38D9FD1912CBD9E900164E85 /* news.png */,
 				38D9FCDC12CBCEBD00164E85 /* Main-Background.png */,
 				38D9FC8412CBC92400164E85 /* NavBar-Background.png */,
@@ -316,6 +319,7 @@
 				38D9FD1E12CBDA4E00164E85 /* email.png in Resources */,
 				38D9FDB112CBE81300164E85 /* BWDRApp-Icon.png in Resources */,
 				3886B5BB12CCE74D00EC0F98 /* webcam.png in Resources */,
+				AA6D694113A58B4D006DDC70 /* maps.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,11 +364,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bob Strodel (A44EMTF45Q)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CampBrookwoods_Prefix.pch;
 				INFOPLIST_FILE = "CampBrookwoods-Info.plist";
 				PRODUCT_NAME = CampBrookwoods;
+				PROVISIONING_PROFILE = "CB5A905C-1798-4A49-94E5-CED7C17CBA20";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -379,7 +385,9 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				SDKROOT = iphonesimulator4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				"SDKROOT[arch=*]" = iphoneos;
 			};
 			name = Debug;
 		};
@@ -387,14 +395,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphonesimulator4.1;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};

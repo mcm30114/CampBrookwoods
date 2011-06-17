@@ -17,7 +17,7 @@
 	Icon *lawnWebcamIcon;
 	Icon *waterWebcamIcon;
 	Icon *newsIcon;
-	Icon *alertSignup;
+	Icon *directions;
 	CountdownViewController *cvc;
 }
 
