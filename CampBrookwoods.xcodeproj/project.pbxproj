@@ -350,6 +350,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -364,13 +365,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Bob Strodel (A44EMTF45Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Bob Strodel";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bob Strodel";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CampBrookwoods_Prefix.pch;
 				INFOPLIST_FILE = "CampBrookwoods-Info.plist";
 				PRODUCT_NAME = CampBrookwoods;
-				PROVISIONING_PROFILE = "CB5A905C-1798-4A49-94E5-CED7C17CBA20";
+				PROVISIONING_PROFILE = "7B45B992-8DD2-4454-AA60-CA4B36263DE7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7B45B992-8DD2-4454-AA60-CA4B36263DE7";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -385,7 +388,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				SDKROOT = iphoneos;
 				"SDKROOT[arch=*]" = iphoneos;
 			};
@@ -402,7 +405,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;

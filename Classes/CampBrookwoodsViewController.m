@@ -90,7 +90,7 @@
     if(icon == directions)
 	{
 		// open up maps
-        NSString *urlString = @"http://maps.google.com/maps?saddr=My%20Location&daddr=34%20Camp%20Brookwoods%20Road%20Alton,NH";
+        NSString *urlString = @"http://maps.google.com/maps?saddr=Current%20Location&daddr=34%20Camp%20Brookwoods%20Road%20Alton,NH";
         //NSString *urlString = @"http://google.com";
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 	}
@@ -99,7 +99,7 @@
         if(icon == lawnWebcamIcon)
         {
             presentedViewController = [[[WebcamViewController alloc] init] autorelease];
-            ((WebcamViewController *)presentedViewController).url = @"http://69.21.83.38:1031/axis-cgi/jpg/image.cgi?resolution=640x480";
+            ((WebcamViewController *)presentedViewController).url = @"http://69.21.83.38:1031/axis-cgi/jpg/image.cgi?resolution=600x320";
             ((WebcamViewController *)presentedViewController).name = @"Front Lawn Camera";
         }
         if(icon == waterWebcamIcon)
