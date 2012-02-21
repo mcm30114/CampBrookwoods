@@ -12,6 +12,20 @@
 #import "Icon.h"
 #import "AlertSignupViewController.h"
 
+@interface CampBrookwoodsViewController()
+{
+    @private
+    Icon *lawnCam;
+    Icon *waterCam;
+    Icon *news;
+    Icon *map;
+}
+
+- (void) createIcons;
+- (void) destroyIcons;
+
+@end
+
 @implementation CampBrookwoodsViewController
 
 @synthesize navBar;
@@ -47,7 +61,13 @@
     [self.countdownView addSubview:cvc.view];
     
     // set scrollview settings;
+    [self.scrollView setContentSize:CGSizeMake(320, 282)];
+    [self.scrollView setScrollEnabled: YES];
+    [self.scrollView setPagingEnabled: YES];
+    [self.scrollView flashScrollIndicators];
     
+    // add icons
+    [self createIcons];
 }
 
 
@@ -58,6 +78,50 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
+
+- (void) createIcons {
+    // initialize
+    lawnCam = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"webcam.png"] name:@"Front Lawn Webcam"] autorelease];
+    waterCam = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"webcam.png"] name:@"Boathouse Lawn Webcam"] autorelease];
+    news = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"news.png"] name:@"News"] autorelease];
+    map = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"maps.png"] name:@"Directions"] autorelease];
+    [lawnCam retain];
+    [waterCam retain];
+    [news retain];
+    [map retain];
+    
+    // set frame;
+    lawnCam.view.frame = CGRectMake(320/4-.5*(lawnCam.view.frame.size.width/2), 30, lawnCam.view.frame.size.width, lawnCam.view.frame.size.height);
+    waterCam.view.frame = CGRectMake(320/2+.5*(waterCam.view.frame.size.width/2), 30, waterCam.view.frame.size.width, waterCam.view.frame.size.height);
+    news.view.frame = CGRectMake(320/4-.5*(news.view.frame.size.width/2), 150, news.view.frame.size.width, news.view.frame.size.height);
+    map.view.frame = CGRectMake(320/2+.5*(map.view.frame.size.width/2), 150, map.view.frame.size.width, map.view.frame.size.height);
+    
+    // add to view
+    [self.scrollView addSubview:[lawnCam view]];
+    [self.scrollView addSubview:[waterCam view]];
+    [self.scrollView addSubview:[news view]];
+    [self.scrollView addSubview:[map view]];
+    
+    // set delegates
+    [lawnCam setDelegate:self];
+    [waterCam setDelegate:self];
+    [news setDelegate:self];
+    [map setDelegate:self];
+}
+
+- (void) destroyIcons {
+    [lawnCam release];
+    [waterCam release];
+    [news release];
+    [map release];
+}
+
+#pragma mark -
+#pragma mark Icon Delegate Methods
+
+- (void) iconWasTapped:(Icon *)icon {
+    NSLog(@"%@", [icon label]);
+}
 
 #pragma mark -
 #pragma mark Memory management
@@ -70,6 +134,7 @@
 }
 
 - (void)viewDidUnload {
+    [self destroyIcons];
     self.navBar = nil;
     self.scrollView = nil;
     self.countdownView = nil;

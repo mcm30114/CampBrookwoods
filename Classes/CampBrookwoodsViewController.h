@@ -12,7 +12,7 @@
 #import "NewsViewController.h"
 #import "Icon.h"
 
-@interface CampBrookwoodsViewController : UIViewController
+@interface CampBrookwoodsViewController : UIViewController <IconDelegate>
 {
     IBOutlet UINavigationBar *navBar;
     IBOutlet UIScrollView *scrollView;
