@@ -47,6 +47,7 @@
     [self.countdownView addSubview:cvc.view];
     
     // set scrollview settings;
+    
 }
 
 

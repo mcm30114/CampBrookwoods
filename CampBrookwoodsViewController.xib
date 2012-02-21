@@ -45,7 +45,7 @@
 					<object class="IBUIImageView" id="680260772">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{0, 44}, {320, 416}}</string>
+						<string key="NSFrame">{{0, 44}, {320, 282}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<int key="IBUIContentMode">6</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -55,7 +55,7 @@
 							<string key="NSResourceName">Main-Background.png</string>
 						</object>
 					</object>
-					<object class="IBUIView" id="211909640">
+					<object class="IBUIView" id="466480614">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{0, 326}, {320, 134}}</string>
@@ -63,7 +63,7 @@
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
-							<object class="NSColorSpace" key="NSCustomColorSpace" id="869903005">
+							<object class="NSColorSpace" key="NSCustomColorSpace" id="771373005">
 								<int key="NSID">2</int>
 							</object>
 						</object>
@@ -104,7 +104,7 @@
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MC43NQA</bytes>
-					<reference key="NSCustomColorSpace" ref="869903005"/>
+					<reference key="NSCustomColorSpace" ref="771373005"/>
 				</object>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -141,7 +141,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">countdownView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="211909640"/>
+						<reference key="destination" ref="466480614"/>
 					</object>
 					<int key="connectionID">21</int>
 				</object>
@@ -173,10 +173,10 @@
 						<reference key="object" ref="774585933"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="680260772"/>
 							<reference ref="22134547"/>
 							<reference ref="238449955"/>
-							<reference ref="211909640"/>
+							<reference ref="680260772"/>
+							<reference ref="466480614"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -209,7 +209,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">20</int>
-						<reference key="object" ref="211909640"/>
+						<reference key="object" ref="466480614"/>
 						<reference key="parent" ref="774585933"/>
 					</object>
 				</object>
@@ -272,7 +272,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">Main-Background.png</string>
-			<string key="NS.object.0">{640, 424}</string>
+			<string key="NS.object.0">{426, 282}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
