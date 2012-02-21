@@ -14,6 +14,10 @@
 
 @implementation CampBrookwoodsViewController
 
+@synthesize navBar;
+@synthesize scrollView;
+@synthesize countdownView;
+
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -38,41 +42,11 @@
 {
     [super viewDidLoad];
 	
-	//create lawn webcam icon
-	lawnWebcamIcon = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"webcam.png"] name:@"Front Lawn Web Cam"] autorelease];
-	[lawnWebcamIcon retain];
-	lawnWebcamIcon.delegate = self;
-	
-	//create boathouse webcam icon
-	waterWebcamIcon = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"webcam.png"] name:@"Boat House Web Cam"] autorelease];
-	[waterWebcamIcon retain];
-	waterWebcamIcon.delegate = self;
-	
-	//create rss icon
-	newsIcon = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"news.png"] name:@"News"] autorelease];
-	[newsIcon retain];
-	newsIcon.delegate = self;
-	
-	//create directions icon
-	directions = [[[Icon alloc] initWithNibName:@"Icon" bundle:nil icon:[UIImage imageNamed:@"maps.png"] name:@"Directions\nto Camp"] autorelease];
-	[directions retain];
-	directions.delegate = self;
-	
-	//add icons to view
-	[self.view addSubview:lawnWebcamIcon.view];
-	[self.view addSubview:waterWebcamIcon.view];
-	[self.view addSubview:newsIcon.view];
-	[self.view addSubview:directions.view];
-	
-	lawnWebcamIcon.view.frame = CGRectMake(68, 70, lawnWebcamIcon.view.frame.size.width, lawnWebcamIcon.view.frame.size.height);
-	waterWebcamIcon.view.frame = CGRectMake(68, 170, lawnWebcamIcon.view.frame.size.width, lawnWebcamIcon.view.frame.size.height);
-	newsIcon.view.frame = CGRectMake(188, 70, newsIcon.view.frame.size.width, newsIcon.view.frame.size.height);
-	directions.view.frame = CGRectMake(188, 170, directions.view.frame.size.width, newsIcon.view.frame.size.height);
-	
 	//add countdown to view
 	cvc = [[[CountdownViewController alloc] initWithNibName:@"CountdownViewController" bundle:nil] autorelease];
-	[self.view addSubview:cvc.view];
-	cvc.view.frame = CGRectMake(0, 460 - cvc.view.frame.size.height, cvc.view.frame.size.width, cvc.view.frame.size.height);
+    [self.countdownView addSubview:cvc.view];
+    
+    // set scrollview settings;
 }
 
 
@@ -83,38 +57,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 */
-
--(void)iconWasTapped:(Icon *)icon
-{
-	id presentedViewController = nil;
-    if(icon == directions)
-	{
-		// open up maps
-        NSString *urlString = @"http://maps.google.com/maps?saddr=Current%20Location&daddr=34%20Camp%20Brookwoods%20Road%20Alton,NH";
-        //NSString *urlString = @"http://google.com";
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
-	}
-    else
-    {
-        if(icon == lawnWebcamIcon)
-        {
-            presentedViewController = [[[WebcamViewController alloc] init] autorelease];
-            ((WebcamViewController *)presentedViewController).url = @"http://69.21.83.38:1031/axis-cgi/jpg/image.cgi?resolution=600x320";
-            ((WebcamViewController *)presentedViewController).name = @"Front Lawn Camera";
-        }
-        if(icon == waterWebcamIcon)
-        {
-            presentedViewController = [[[WebcamViewController alloc] init] autorelease];
-            ((WebcamViewController *)presentedViewController).url = @"http://69.21.83.38:8000/control/faststream.jpg?preview&size=600x320&framecount=1";
-            ((WebcamViewController *)presentedViewController).name = @"Boat House Camera";
-        }
-        if(icon == newsIcon)
-        {
-            presentedViewController	= [[[UINavigationController alloc] initWithRootViewController:[[[NewsViewController alloc] initWithNibName:@"NewsViewController" bundle:nil] autorelease]] autorelease];
-        }
-        [self presentModalViewController:presentedViewController animated:YES];
-    }
-}
 
 #pragma mark -
 #pragma mark Memory management
@@ -127,15 +69,16 @@
 }
 
 - (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
+    self.navBar = nil;
+    self.scrollView = nil;
+    self.countdownView = nil;
 }
 
 
 - (void)dealloc {
-	[lawnWebcamIcon release];
-	[waterWebcamIcon release];
-	[newsIcon release];
+    [self.navBar release];
+    [self.scrollView release];
+    [self.countdownView release];
     [super dealloc];
 }
 

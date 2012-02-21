@@ -12,14 +12,18 @@
 #import "NewsViewController.h"
 #import "Icon.h"
 
-@interface CampBrookwoodsViewController : UIViewController <IconDelegate>
+@interface CampBrookwoodsViewController : UIViewController
 {
-	Icon *lawnWebcamIcon;
-	Icon *waterWebcamIcon;
-	Icon *newsIcon;
-	Icon *directions;
+    IBOutlet UINavigationBar *navBar;
+    IBOutlet UIScrollView *scrollView;
+    IBOutlet UIView *countdownView;
+    
 	CountdownViewController *cvc;
 }
+
+@property (nonatomic, retain) IBOutlet UINavigationBar *navBar;
+@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, retain) IBOutlet UIView *countdownView;
 
 @end
 

@@ -18,9 +18,21 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
+- (void) customNavBarAppearance {
+    
+    // set custom navbar background and font;
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"NavBar-Background.png"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTitleTextAttributes:
+        [NSDictionary dictionaryWithObjectsAndKeys:
+            [UIColor blackColor], UITextAttributeTextColor,
+            [UIFont fontWithName:@"Helvetica-Bold" size:22], UITextAttributeFont,
+            nil]];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
     // Override point for customization after application launch.
+    [self customNavBarAppearance];
 
     // Add the view controller's view to the window and display.
     [self.window addSubview:viewController.view];
