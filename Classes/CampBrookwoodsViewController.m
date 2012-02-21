@@ -121,6 +121,34 @@
 
 - (void) iconWasTapped:(Icon *)icon {
     NSLog(@"%@", [icon label]);
+    
+    id presentedViewController = nil;
+    if(icon == map)
+	{
+		// open up maps
+        NSString *urlString = @"http://maps.google.com/maps?saddr=Current%20Location&daddr=34%20Camp%20Brookwoods%20Road%20Alton,NH";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+	}
+    else
+    {
+        if(icon == lawnCam)
+        {
+            presentedViewController = [[[WebcamViewController alloc] init] autorelease];
+            ((WebcamViewController *)presentedViewController).url = @"http://69.21.83.38:1031/axis-cgi/jpg/image.cgi?resolution=600x320";
+            ((WebcamViewController *)presentedViewController).name = @"Front Lawn Camera";
+        }
+        if(icon == waterCam)
+        {
+            presentedViewController = [[[WebcamViewController alloc] init] autorelease];
+            ((WebcamViewController *)presentedViewController).url = @"http://69.21.83.38:8000/control/faststream.jpg?preview&size=600x320&framecount=1";
+            ((WebcamViewController *)presentedViewController).name = @"Boat House Camera";
+        }
+        if(icon == news)
+        {
+            presentedViewController	= [[[UINavigationController alloc] initWithRootViewController:[[[NewsViewController alloc] initWithNibName:@"NewsViewController" bundle:nil] autorelease]] autorelease];
+        }
+        [self presentModalViewController:presentedViewController animated:YES];
+    }
 }
 
 #pragma mark -
